@@ -210,6 +210,10 @@ generate_splash_screens()
 	splash_height=${deviceinfo_screen_height:-1280}
 	splash_cache_dir="/var/cache/postmarketos-splashes"
 
+	# Overwrite $@ to easily iterate over the splash screens. Format:
+	# $1: splash_name
+	# $2: text
+	# $3: arguments
 	set -- "splash-telnet"           "On-screen keyboard is not implemented yet, plug in a USB cable and run on your PC:\\ntelnet 172.16.42.1" "" \
 	       "splash-loading"          "Loading..." "--center" \
 	       "splash-noboot"           "boot partition not found\\nhttps://postmarketos.org/troubleshooting" "--center" \
