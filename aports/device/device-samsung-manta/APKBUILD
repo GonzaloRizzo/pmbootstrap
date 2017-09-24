@@ -5,9 +5,9 @@ pkgdesc="Samsung Nexus 10"
 url="https://github.com/postmarketOS"
 arch="noarch"
 license="MIT"
-depends="linux-samsung-manta mkbootimg"
+depends="linux-samsung-manta linux-firmware mkbootimg"
 makedepends=""
-install=""
+install="$pkgname.post-install"
 subpackages=""
 source="deviceinfo 90-android-touch-dev.rules initfs-hook.sh"
 options="!check"
@@ -26,5 +26,5 @@ package() {
 }
 
 sha512sums="0d01b262902e88fef256703194bb32de3bdeefc06acec67eb9cc7e64153c0f7f57c92de779956fe49ce03a515a47f531f67ff5274352946ce3c21f94a52f5389  deviceinfo
-f37e6324abf0b0fc8a3d360d6d11bb0648090a438a55ca7f04a9d494719e687ce445ae107ace642edf293afb6ca82615bcb5d0ddb6c46c1a7f8ee3c213b7c5c4  90-android-touch-dev.rules
+dd8d66d3605d8fa7dd3998ea63f74dcf147f8a9b21dc97df8997d98de68b5757fdf909f11cb0fb033ec13b77f9c86e20301f79eba570eefdd022e8d8f49761cf  90-android-touch-dev.rules
 8590967fa10388a890fdfafdb1070b9ab22dc89e06a3a8834806c772191e3b67de7b914b0d68e5ddf581cee715cb90f3f24abcb8762c415ff328c6da23e55d52  initfs-hook.sh"

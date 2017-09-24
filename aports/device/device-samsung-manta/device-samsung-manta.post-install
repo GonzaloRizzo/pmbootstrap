@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sed -i 's/WATCHDOG_DEV=\"\"/WATCHDOG_DEV=\"\/dev\/watchdog\"/' /etc/conf.d/watchdog 2> /tmp/errorsed
+rc-update add watchdog
+
